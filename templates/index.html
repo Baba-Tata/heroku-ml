@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Credit Card Default Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Balance limit" placeholder="Balance limit" required="required" />
+        <input type="text" name="Sex" placeholder="Sex" required="required" />
+		<input type="text" name="Education" placeholder="Education" required="required" />
+        <input type="text" name="Marriage" placeholder="Marriage" required="required" />
+        <input type="text" name="Age" placeholder="Age" required="required" />
+		<input type="text" name="PAY_1" placeholder="PAY_1" required="required" />
+        <input type="text" name="PAY_2" placeholder="PAY_2" required="required" />
+        <input type="text" name="PAY_3" placeholder="PAY_3" required="required" />
+        <input type="text" name="PAY_4" placeholder="PAY_4" required="required" />
+        <input type="text" name="PAY_5" placeholder="PAY_5" required="required" />
+        <input type="text" name="PAY_6" placeholder="PAY_6" required="required" />
+        <input type="text" name="Bill_amt_1" placeholder="Bill_amt_1" required="required" />
+        <input type="text" name="Bill_amt_2" placeholder="Bill_amt_2" required="required" />
+        <input type="text" name="Bill_amt_3" placeholder="Bill_amt_3" required="required" />
+        <input type="text" name="Bill_amt_4" placeholder="Bill_amt_4" required="required" />
+        <input type="text" name="Bill_amt_5" placeholder="Bill_amt_5" required="required" />
+        <input type="text" name="Bill_amt_6" placeholder="Bill_amt_6" required="required" />
+        <input type="text" name="Pay_amt_1" placeholder="Pay_amt_1" required="required" />
+        <input type="text" name="Pay_amt_2" placeholder="Pay_amt_2" required="required" />
+        <input type="text" name="Pay_amt_3" placeholder="Pay_amt_3" required="required" />
+        <input type="text" name="Pay_amt_4" placeholder="Pay_amt_4" required="required" />
+        <input type="text" name="Pay_amt_5" placeholder="Pay_amt_5" required="required" />
+        <input type="text" name="Pay_amt_6" placeholder="Pay_amt_6" required="required" />
+        <input type="text" name="Has_Def" placeholder="Has_def" required="required" />
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
